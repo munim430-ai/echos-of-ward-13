@@ -1,0 +1,331 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+:root{
+    --text-color-prim: #00ff41;
+    --text-color-seg: #040101;
+    --accent-red: #c0392b;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    min-height: 100vh;
+    background: #0a0808 url(../img/humayra.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'inter', sans-serif;
+    overflow-x: hidden;
+}
+
+main{
+    text-align: center;
+    width: 100%;
+    padding: 40px 20px;
+}
+
+/* Main Texts Section */
+.main-texts h3{
+    font-size: 16px;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main-texts span{
+    color: var(--text-color-prim);
+    text-shadow: 0 0 10px var(--text-color-prim);
+    font-weight: 900;
+}
+
+.main-texts h1{
+    font-size: 72px;
+    font-weight: 300;
+    color: var(--text-color-prim);
+    font-family: 'Emilys Candy', sans-serif;
+    line-height: 90px;
+    text-shadow: 0 0 20px var(--text-color-prim), 0 0 40px var(--accent-red);
+    margin: 20px 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.main-texts p{
+    font-size: 18px;
+    color: #fff;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Author Section */
+.author-info {
+    margin: 60px 0;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--accent-red);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.author-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.author-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid var(--text-color-prim);
+    box-shadow: 0 0 20px var(--text-color-prim);
+    object-fit: cover;
+}
+
+.author-text {
+    text-align: left;
+}
+
+.author-text h4 {
+    font-size: 14px;
+    color: var(--text-color-prim);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.author-text h3 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.author-text p {
+    font-size: 16px;
+    color: #ccc;
+    font-style: italic;
+}
+
+/* Game Story Section */
+.game-story {
+    margin: 60px 0;
+    padding: 40px;
+    background: rgba(192, 57, 43, 0.1);
+    border-left: 4px solid var(--accent-red);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.game-story h2 {
+    font-size: 32px;
+    color: var(--text-color-prim);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.game-story p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.game-story em {
+    color: var(--text-color-prim);
+    font-style: italic;
+}
+
+/* Game Features Section */
+.game-features {
+    margin: 60px 0;
+    padding: 40px;
+}
+
+.game-features h2 {
+    font-size: 32px;
+    color: var(--text-color-prim);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.feature {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--text-color-prim);
+    padding: 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    background: rgba(0, 255, 65, 0.1);
+    box-shadow: 0 0 15px var(--text-color-prim);
+    transform: translateY(-5px);
+}
+
+.feature h4 {
+    font-size: 20px;
+    color: var(--text-color-prim);
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* Links Section */
+.links {
+    padding: 40px 0;
+}
+
+.links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.links a{
+    padding: 14px 40px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.links .btn-play-now{
+    background-color: var(--text-color-prim);
+    color: var(--text-color-seg);
+    box-shadow: 0 0 20px var(--text-color-prim);
+}
+
+.links .btn-play-now:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--text-color-prim);
+}
+
+.links .btn-read-more{
+    border: 2px solid var(--text-color-prim);
+    color: var(--text-color-prim);
+}
+
+.links .btn-read-more:hover{
+    background-color: var(--text-color-prim);
+    color: var(--text-color-seg);
+    box-shadow: 0 0 20px var(--text-color-prim);
+}
+
+/* Footer */
+.footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    border-top: 1px solid var(--accent-red);
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-texts h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+
+    .main-texts h3 {
+        font-size: 14px;
+    }
+
+    .main-texts p {
+        font-size: 16px;
+    }
+
+    .author-card {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .author-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    .author-text {
+        text-align: center;
+    }
+
+    .author-text h3 {
+        font-size: 24px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .links a {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 20px 10px;
+    }
+
+    .main-texts h1 {
+        font-size: 36px;
+        line-height: 45px;
+    }
+
+    .author-info {
+        padding: 20px;
+    }
+
+    .author-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .game-story {
+        padding: 20px;
+    }
+
+    .game-features {
+        padding: 20px;
+    }
+}
